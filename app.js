@@ -75,10 +75,44 @@ function formateoMsj(msj){
 
 //Funcion desencriptar
 function desencriptar(){
+    let msjInicial = document.getElementById("msjDer").value;
+    let msjFinal = "";
+
+    msjInicial = msjInicial.toLowerCase();
+    
+    ocultarElemento("areaMsj");
+    /*
+    e = enter
+    i = imes
+    a = ai
+    o = ober
+    u = ufat
+    -implementar el ctrl + c
+    */
+
+    msjFinal = msjInicial
+
+    console.log(msjFinal);
+
+    //Logica de encriptacion
+    msjFinal = msjFinal.replaceAll('enter', 'e');
+    msjFinal = msjFinal.replaceAll('imes', 'i');
+    msjFinal = msjFinal.replaceAll('ai', 'a');
+    msjFinal = msjFinal.replaceAll('ober', 'o');
+    msjFinal = msjFinal.replaceAll('ufat', 'u');
+
+    console.log(msjFinal);
+
+    //Justificar y acomodar texto en pantalla
+    document.getElementById('mainEncriptado').style.alignItems = "flex-start";
+    document.getElementById("msjFinal").classList.remove('centrar-texto');
+    editarTexto("msjFinal", msjFinal);
+    mostrarElemento('btnCopiar');
+
 
 }
 
 //Funcion copiar
 function copiarTexto(){
-
+    
 }
