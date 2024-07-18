@@ -1,4 +1,5 @@
 ocultarElemento('btnCopiar');
+//ocultarElemento('msjFinal');
 
 //Funcion encriptar
 function encriptar(){
@@ -42,36 +43,11 @@ function encriptar(){
 
     //Justificar y acomodar texto en pantalla
     document.getElementById('mainEncriptado').style.alignItems = "flex-start";
-    document.getElementById("msjFinal").classList.remove('centrar-texto');
+    document.getElementById("msjFinal").style.textAlign = "start";
     editarTexto("msjFinal", msjFinal);
     mostrarElemento('btnCopiar');
-
-
+    editarTexto("btnCopiar", "Copiar");
 }
-
-//Editar texto de un elemento mediante su id
-function editarTexto(id, texto){
-    let htmlEtiqueta = document.getElementById(id);
-    htmlEtiqueta.innerHTML = texto;
-}
-
-//Oculta un elemento mediante su id
-function ocultarElemento(id){
-    document.getElementById(id).style.display = "none";
-}
-
-//Muestra un elemento mediante su id
-function mostrarElemento(id){
-    document.getElementById(id).style.display = "initial";
-}
-
-//Retorna un array apartir de un string dado
-function formateoMsj(msj){
-    msj = msj.toLowerCase();        //convirtiendo el mensaje a minusculas
-    return msj.split('');           //Convirtiendo el texto a un array
-}
-
-
 
 //Funcion desencriptar
 function desencriptar(){
@@ -105,14 +81,46 @@ function desencriptar(){
 
     //Justificar y acomodar texto en pantalla
     document.getElementById('mainEncriptado').style.alignItems = "flex-start";
-    document.getElementById("msjFinal").classList.remove('centrar-texto');
+    document.getElementById("msjFinal").style.textAlign = "start";
     editarTexto("msjFinal", msjFinal);
     mostrarElemento('btnCopiar');
-
-
+    editarTexto("btnCopiar", "Copiar");
 }
 
 //Funcion copiar
 function copiarTexto(){
+    let texto = document.getElementById("msjFinal");
     
+    //seleccionando el texto
+    texto.select();
+    texto.setSelectionRange(0, 99999);
+
+    //escribiendo en el portapapeles el texto
+    navigator.clipboard.writeText(texto.value);
+
+    //Avisando al usuario que se copio el texto en su portapapeles
+    editarTexto("btnCopiar", "Copiado!");
+}
+
+
+//Editar texto de un elemento mediante su id
+function editarTexto(id, texto){
+    let htmlEtiqueta = document.getElementById(id);
+    htmlEtiqueta.innerHTML = texto;
+}
+
+//Oculta un elemento mediante su id
+function ocultarElemento(id){
+    document.getElementById(id).style.display = "none";
+}
+
+//Muestra un elemento mediante su id
+function mostrarElemento(id){
+    document.getElementById(id).style.display = "initial";
+}
+
+//Retorna un array apartir de un string dado
+function formateoMsj(msj){
+    msj = msj.toLowerCase();        //convirtiendo el mensaje a minusculas
+    return msj.split('');           //Convirtiendo el texto a un array
 }

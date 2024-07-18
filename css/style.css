@@ -157,6 +157,18 @@ h1, h2, h3, h4{
     margin: 1rem;
     font-size: var(--regular);
 }
+.main__encriptado--textarea{
+    width: 100%;
+    height: 50rem;
+    text-align: center;
+    font-family: var(--fuente-principal);
+    font-size: var(--regular);
+    color: var(--rosa-textos);
+    border: 0;
+    text-wrap: wrap;
+    background-color: var(--claro);
+    resize: none;
+}
 
 .bold{
     color: var(--rosa-claro-textos);
@@ -176,14 +188,20 @@ h1, h2, h3, h4{
 
     .main__encriptado{
         width: 100%;
+        height: 30rem;
     }
 
     .main__encriptado--img{
         width: 0%;
     }
+
 }
 
 @media (max-width: 430px) {
+    .header{
+        padding: 2rem 0 0 0;
+    }
+    
     .main__texto--textarea{
         height: 20rem;
         font-size: var(--regular);
@@ -196,8 +214,7 @@ h1, h2, h3, h4{
 
     .boton{
         font-size: var(--regular);
-        margin: 1.2rem;
-        width: 100%;
+        width: 94%;
     }
 
     .main__encriptado{
