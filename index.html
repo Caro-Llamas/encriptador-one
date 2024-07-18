@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
+
+    <!--Preload-->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
+    <!--Header-->
+    <header class="header no-margin">
+        <img class="headr__logo" src="assets/logo.png" alt="Dibujo de un gato negro dormido">
+    </header>
+    <!--Fin Header-->
+
+
+    <!--Main-->
+    <main class="main">
+        <section class="main__texto">
+            <textarea autocapitalize="none" class="main__texto--textarea" name="left-textarea">Ingrese el texto aquí</textarea>
+            <p class="main__texto--info no-margin">☻ Introduce solo letras minúsculas y sin acentos.</p>
+            <div class="main__botones">
+                <button class="boton">Encriptar</button>
+                <button class="boton disabled">Desencriptar</button>
+            </div>
+        </section>
+
+        <div class="main__encriptado">
+            
+            <img class="main__encriptado--img" src="assets/icono.png" alt="Dibujo de Carolina sentada al lado de un gato negro">
+            <h2 class="main__encriptado--texto bold centrar-texto">Ningún mensaje fue encontrado</h2>
+            <p class="main__encriptado--texto centrar-texto">Ingresa el texto que deseas encriptar o desencriptar</p>
+            <button class="boton no-fill">Copiar</button>
+        </div>
+        
+    </main>
+    <!--Fin Main-->
+
+
+    <!--Footer-->
+    <footer class="footer">
+        <p class="footer__texto">Desarrollado por Carolina Llamas</p>
+        <img class="footer__img" src="assets/icono.png" alt="Dibujo de Carolina sentada al lado de un gato negro">
+    </footer>
+    <!--Fin Footer-->
+
 </body>
 </html>

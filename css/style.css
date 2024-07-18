@@ -1,0 +1,238 @@
+:root{
+    /*Colores*/
+    --claro: #ffebf0;
+    --oscuro: #5F163F;
+    --rosa-claro: #FFd6e0;
+    --rosa-enfasis: #FFa0b7;
+    --rosa-claro-textos: #ffc2d1;
+    --rosa-medio: #fac7cf;
+    --rosa-textos: #e89ba8;
+
+    /*Fuentes*/
+    --fuente-principal: "Just Another Hand", cursive;
+    --small: 2.0rem;
+    --regular: 3.2rem;
+    --large: 3.6rem;
+    --xlarge: 4.8rem;
+
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuente-principal);
+    font-size: 1.6rem;
+    background-color: var(--rosa-claro);
+}
+
+/**Globales**/
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--fuente-principal);
+}
+
+/**Utilidades**/
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+
+/**Header**/
+.header{
+    padding: 4rem 0 0 4rem;
+}
+
+@media (max-width: 430px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/**Main**/
+.main{
+    display: flex;
+}
+
+.main__texto{
+    width: 70%;
+    padding: 0 1rem 1rem 20rem;
+}
+
+.main__texto--textarea{
+    width: 100%;
+    height: 50rem;
+    font-family: var(--fuente-principal);
+    font-size: var(--xlarge);
+    color: var(--rosa-enfasis);
+    border: 0;
+    text-wrap: wrap;
+    background-color: var(--rosa-claro);
+    resize: none;
+}
+
+.main__texto--info{
+    font-size: var(--small);
+    color: var(--rosa-textos);
+}
+
+.main__botones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton{
+    font-family: var(--fuente-principal);
+    font-size: var(--regular);
+    color: var(--claro);
+    text-decoration: none;
+    background-color: var(--rosa-enfasis);
+    border: 0.2rem solid var(--rosa-enfasis);
+    border-radius: 2.4rem;
+    width: 50%;
+    height: 8rem;
+    margin: 0.6rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.boton:hover{
+    box-shadow: 0 0.8rem 1.6rem rgba(95, 22, 63, 0.5);
+}
+
+.no-fill{
+    background-color: var(--claro);
+    color: var(--rosa-enfasis);
+}
+
+.disabled{
+    background-color: var(--rosa-medio);
+    color: var(--rosa-enfasis);
+}
+
+.main__encriptado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    background-color: var(--claro);
+    border-radius: 3.2rem;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 0.8rem 1.6rem rgba(95, 22, 63, 0.2);
+}
+
+.main__encriptado--img{
+    width: 100%;
+}
+
+.main__encriptado--texto{
+    color: var(--rosa-claro-textos);
+    margin: 1rem;
+    font-size: var(--regular);
+}
+
+.bold{
+    color: var(--rosa-textos);
+}
+
+@media (max-width: 1100px) {
+    .main{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4rem 0 4rem;
+    }
+
+    .main__texto{
+        width: 100%;
+        padding: 0;
+    }
+
+    .main__encriptado{
+        width: 100%;
+    }
+
+    .main__encriptado--img{
+        width: 0%;
+    }
+}
+
+@media (max-width: 430px) {
+    .main__texto--textarea{
+        height: 20rem;
+        font-size: var(--regular);
+    }
+    
+    .main__botones{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton{
+        font-size: var(--regular);
+        margin: 1.2rem;
+        width: 100%;
+    }
+
+    .main__encriptado{
+        margin: 2.4rem;
+    }
+
+    .main__encriptado--texto{
+        font-size: var(--regular);
+        margin: 0;
+    }
+}
+
+/**Footer**/
+.footer{
+    height: 14.5rem;
+    display: flex;
+    justify-content: end;
+}
+
+.footer__texto{
+    color: var(--rosa-textos);
+    font-size: var(--large);
+}
+
+@media (max-width: 1100px) {
+    .footer{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 430px) {
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__texto{
+        font-size: var(--small);
+    }
+
+    .footer__img{
+        width: 20%;
+    }
+}
