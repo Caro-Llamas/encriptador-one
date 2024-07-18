@@ -121,6 +121,7 @@ h1, h2, h3, h4{
 }
 
 .no-fill{
+    width: 98%;
     background-color: var(--claro);
     color: var(--rosa-enfasis);
 }
@@ -134,6 +135,7 @@ h1, h2, h3, h4{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 25%;
     background-color: var(--claro);
     border-radius: 3.2rem;
@@ -147,13 +149,13 @@ h1, h2, h3, h4{
 }
 
 .main__encriptado--texto{
-    color: var(--rosa-claro-textos);
+    color: var(--rosa-textos);
     margin: 1rem;
     font-size: var(--regular);
 }
 
 .bold{
-    color: var(--rosa-textos);
+    color: var(--rosa-claro-textos);
 }
 
 @media (max-width: 1100px) {

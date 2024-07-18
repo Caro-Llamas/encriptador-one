@@ -25,21 +25,22 @@
     <!--Main-->
     <main class="main">
         <section class="main__texto">
-            <textarea autocapitalize="none" class="main__texto--textarea" name="left-textarea">Ingrese el texto aquí</textarea>
+            <textarea id="msjDer" class="main__texto--textarea" name="left-textarea" autocapitalize="off">Ingrese el texto aquí</textarea>
             <p class="main__texto--info no-margin">☻ Introduce solo letras minúsculas y sin acentos.</p>
             <div class="main__botones">
-                <button class="boton">Encriptar</button>
-                <button class="boton disabled">Desencriptar</button>
+                <button onclick="encriptar()" id="btnEncriptar" class="boton">Encriptar</button>
+                <button onclick="desencriptar()" id="btnDesencriptar" class="boton disabled">Desencriptar</button>
             </div>
         </section>
 
-        <div class="main__encriptado">
-            
-            <img class="main__encriptado--img" src="assets/icono.png" alt="Dibujo de Carolina sentada al lado de un gato negro">
-            <h2 class="main__encriptado--texto bold centrar-texto">Ningún mensaje fue encontrado</h2>
-            <p class="main__encriptado--texto centrar-texto">Ingresa el texto que deseas encriptar o desencriptar</p>
-            <button class="boton no-fill">Copiar</button>
-        </div>
+        <section id="mainEncriptado" class="main__encriptado">
+            <div id="areaMsj">
+                <img class="main__encriptado--img" src="assets/icono.png" alt="Dibujo de Carolina sentada al lado de un gato negro">
+                <h2 class="main__encriptado--texto bold centrar-texto">Ningún mensaje fue encontrado</h2>
+            </div>
+            <p id="msjFinal" class="main__encriptado--texto centrar-texto">Ingresa el texto que deseas encriptar o desencriptar</p>
+            <button onclick="copiarTexto()" id="btnCopiar" class="boton no-fill">Copiar</button>
+        </section>
         
     </main>
     <!--Fin Main-->
@@ -52,5 +53,6 @@
     </footer>
     <!--Fin Footer-->
 
+    <script src="app.js"></script>
 </body>
 </html>
