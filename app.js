@@ -8,6 +8,7 @@ function encriptar(){
 
     let arrayAEncriptar = formateoMsj(msjInicial);        //Convirtiendo el texto a un array
     
+
     ocultarElemento("areaMsj");
     /*
     e = enter
@@ -86,6 +87,8 @@ function desencriptar(){
     mostrarElemento('btnCopiar');
     editarTexto("btnCopiar", "Copiar");
 }
+
+//Funcion para checar que no hayan caracteres especiales
 
 //Funcion copiar
 function copiarTexto(){

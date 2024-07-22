@@ -85,6 +85,7 @@ h1, h2, h3, h4{
     font-family: var(--fuente-principal);
     font-size: var(--xlarge);
     color: var(--rosa-enfasis);
+    outline: none;
     border: 0;
     text-wrap: wrap;
     background-color: var(--rosa-claro);
